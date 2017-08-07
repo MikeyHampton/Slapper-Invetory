@@ -1,0 +1,14 @@
+name: SlapperInventory
+description: Creates a inventory within a slapper entity
+author: Atomization - Fidget Dev
+main: atomization\slapperinventory\main
+version: 1.0.0
+api: 3.0.0
+commands: 
+ slapperinv:
+  description: "Creates a inventory within a slapper entity"
+  permission: slapper.inv
+permissions:
+ slapperinv:
+  default: op
+  description: Creates a inventory within a slapper entity
