@@ -1,0 +1,7 @@
+--- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/Fidget-Dev/Slapper-Invetory
+branches:
+- master
+projects:
+  SlapperInventory:
+    path: SlapperInventory/
+...
