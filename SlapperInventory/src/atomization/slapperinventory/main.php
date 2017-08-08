@@ -266,33 +266,3 @@ class Main extends PluginBase implements Listener {
 		return [];
 	}
 }
-
-class WaitTask extends PluginTask{
-    
-    public $time=1;
-    private $player;
-    private $command;
-    private $plugin;
-    public $prefix="§4[§2Slapper Inventory§4]§r";
-    
-    public function __construct(Plugin $plugin, $player, $command){
-		parent::__construct($plugin);
-                $this->main=$plugin;
-                $this->player=$player;
-                $this->command=$command;
-    }
-    
-    public function OnRun($currentTick){
-        $p=$this->main->getServer()->getPlayer($this->player);
-        if($this->time>=0){
-            $this->time--;
-            $p->sendTip("§2Loading.. $this->time");
-            if($this->time==0){
-                $command=$this->command;
-                $playername=$this->player;
-                $this->main->getServer()->dispatchCommand($p, $command);
-                $this->main->getServer()->getScheduler()->cancelTask($this->getTaskId());
-            }
-        }
-    }
-}
