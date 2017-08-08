@@ -6,3 +6,4 @@
 Creates a Inventory within a Slapper entity
 
 /slapperinv help
+
